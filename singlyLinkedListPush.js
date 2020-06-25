@@ -8,10 +8,8 @@ class Node {
     }
 }
 
-class SinglyLinkedList extends Node {
-    constructor(val) {
-        super(val)
-
+class SinglyLinkedList {
+    constructor() {
         this.head = null;
         this.tail = null;
         this.length = 0;
@@ -31,10 +29,14 @@ class SinglyLinkedList extends Node {
             this.tail.next = newNode;
             this.tail = newNode;
         }
+        this.length++;
+        return this;
     }
 }
 
 let list = new SinglyLinkedList()
 list.push("Hello");
+list.push(1);
+list.push(2);
 
 console.log(list);
